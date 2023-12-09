@@ -1,0 +1,148 @@
+* {
+    padding: 10px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat;
+    background: rgba((250, 0, 0, 0.533)59, 59, 73, 0.533);
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+nav {
+    background: #8c040d;
+    height: 100px;
+    width: 100%;
+}
+
+label.logo {
+    color: rgb(67, 60, 60);
+    font-size: 40px;
+    margin: 0 100px;
+    line-height: 0;
+    padding: 0 100px;
+    font-weight: bold;
+    
+}
+
+nav ul {
+    float: left;
+    margin-left: 170px;
+}
+
+ nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+} 
+
+nav ul li a {
+    color: rgb(21, 21, 47);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #3d5d72;
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: rgb(44, 60, 73);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    nav ul li a.active {
+        background: none;
+        color: #008e;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    } 
+}
+@media screen and (max-width: 768px) {
+    label.logo {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    nav ul {
+        width: 100%;
+        text-align: center;
+        display: none;
+        position: absolute;
+        background: #598181;
+        top: 80px;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked + .menu {
+        display: block;
+    }
+}
